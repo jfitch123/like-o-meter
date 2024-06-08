@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like-O-Meter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Calibri, sans-serif;
+            text-align: center;
+            background-image: url('data:image/jpeg;base64,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'); /* Replace with the actual data URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box {
+            margin: 0 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: Calibri;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Like-O-Meter</h1>
+        <div class="container">
+            <div class="box">
+                <h3>Girls</h3>
+                <textarea id="girls" rows="10" cols="20"></textarea>
+            </div>
+            <div class="box">
+                <h3>Boys</h3>
+                <textarea id="boys" rows="10" cols="20"></textarea>
+            </div>
+        </div>
+        <button onclick="chooseRandom()">Spin!</button>
+        <p id="result"></p>
+        <p id="percentage"></p>
+    </div>
+
+    <script>
+        function chooseRandom() {
+            const girls = document.getElementById('girls').value.split('\n').filter(entry => entry.trim() !== '');
+            const boys = document.getElementById('boys').value.split('\n').filter(entry => entry.trim() !== '');
+            
+            if (girls.length > 0 && boys.length > 0) {
+                let interval;
+                let startTime = Date.now();
+                const duration = 2500; // 2.5 seconds
+
+                const button = document.querySelector('button');
+                button.disabled = true; // Disable button during spinning
+
+                interval = setInterval(() => {
+                    if (Date.now() - startTime >= duration) {
+                        clearInterval(interval);
+                        const finalGirlIndex = Math.floor(Math.random() * girls.length);
+                        const finalBoyIndex = Math.floor(Math.random() * boys.length);
+                        const randomChoice = Math.floor(Math.random() * 2) + 1;
+                        let resultText;
+                        if (randomChoice === 1) {
+                            resultText = `${boys[finalBoyIndex]} likes ${girls[finalGirlIndex]}`;
+                        } else {
+                            resultText = `${girls[finalGirlIndex]} likes ${boys[finalBoyIndex]}`;
+                        }
+                        document.getElementById('result').innerText = resultText;
+                        
+                        // Generate and display random percentage
+                        const percentage = Math.floor(Math.random() * 100) + 1;
+                        document.getElementById('percentage').innerText = `Match percentage: ${percentage}%`;
+                        button.disabled = false; // Enable button after spinning
+                    } else {
+                        const randomGirlIndex = Math.floor(Math.random() * girls.length);
+                        const randomBoyIndex = Math.floor(Math.random() * boys.length);
+                        const randomChoice = Math.floor(Math.random() * 2) + 1;
+                        if (randomChoice === 1) {
+                            document.getElementById('result').innerText = `${boys[randomBoyIndex]} likes ${girls[randomGirlIndex]}`;
+                        } else {
+                            document.getElementById('result').innerText = `${girls[randomGirlIndex]} likes ${boys[randomBoyIndex]}`;
+                        }
+                    }
+                }, 50); // Change text every 50ms
+            }
+        }
+    </script>
+</body>
+</html>
